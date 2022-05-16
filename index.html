@@ -8,51 +8,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="slider">
-            <div class="slider-items">
-                <div class="item">
-                    <img src="assets/ilon.jpg" alt="ilon mem">
-                </div>
-                <div class="item">
-                    <img src="assets/night.jpg" alt="night mem">
-                </div>
-                <div class="item">
-                    <img src="assets/tests.jpg" alt="test mem">
-                </div>
-                <div class="item">
-                    <img src="assets/write.jpg" alt="write mem">
-                </div>
-            </div>
-            <div class="text-and-nav">
-                <div class="text">
-                    <div class="text-items">
-                        <div class="item">
-                            <p>ilon mem</p>
-                        </div>
-                        <div class="item">
-                            <p>night mem</p>
-                        </div>
-                        <div class="item">
-                            <p>test mem</p>
-                        </div>
-                        <div class="item">
-                            <p>write mem</p>
-                        </div>
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+            <div class="inner">
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="/assets/ilon.jpg" alt="">
                     </div>
                 </div>
-                <div class="slider-nav">
-                    <label for="mem1" class="slider-nav-item"></label>
-                    <label for="mem2" class="slider-nav-item"></label>
-                    <label for="mem3" class="slider-nav-item"></label>
-                    <label for="mem4" class="slider-nav-item"></label>
-                    <input type="radio" name="mem" id="mem1">
-                    <input type="radio" name="mem" id="mem2">
-                    <input type="radio" name="mem" id="mem3">
-                    <input type="radio" name="mem" id="mem4">
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="/assets/night.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="/assets/tests.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="/assets/write.jpg" alt="">
+                    </div>
                 </div>
             </div>
-        </div> 
-    </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
 </body>
 </html>
