@@ -53,12 +53,28 @@
     margin-left: -300%;
  }
 
+/*move text*/
+ #slide1:checked ~ .text-and-controls .text .text-items .first {
+   margin-left: 0;
+}
+#slide2:checked ~ .text-and-controls .text .text-items .first {
+   margin-left: -25%;
+}
+#slide3:checked ~ .text-and-controls .text .text-items .first {
+   margin-left: -50%;
+}
+#slide4:checked ~ .text-and-controls .text .text-items .first {
+   margin-left: -75%;
+}
+
  
 
  #controls {
-    margin: 2% 0 0;
-    text-align: end;
+    display: flex;
+    column-gap: 1%;
+    margin-top: 1vw;
  }
+
  #controls label {
     display: inline-block;
     width: 1.2vw;
@@ -66,33 +82,51 @@
     border:0.2vw solid rgb(43, 0, 255);
     border-radius:100%;
     background: transparent;
-    margin: 0 1.1%;
  }
 
  #controls label:hover {
    border:0.2vw solid rgb(196, 0, 0);;
 }
 
- #slide1:checked ~ #controls label:nth-child(1),
- #slide2:checked ~ #controls label:nth-child(2),
- #slide3:checked ~ #controls label:nth-child(3),
- #slide4:checked ~ #controls label:nth-child(4) {
+ #slide1:checked ~ .text-and-controls #controls label:nth-child(1),
+ #slide2:checked ~ .text-and-controls #controls label:nth-child(2),
+ #slide3:checked ~ .text-and-controls #controls label:nth-child(3),
+ #slide4:checked ~ .text-and-controls #controls label:nth-child(4) {
     background: rgb(196, 0, 0);
  }
 
- @media screen and (max-width: 320px) {
-    #slide1:checked ~ #controls label:nth-child(2),
-    #slide2:checked ~ #controls label:nth-child(3),
-    #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(2),
-    #slide2:checked ~ #controls label:nth-last-child(3),
-    #slide3:checked ~ #controls label:nth-last-child(4),
-    #slide4:checked ~ #controls label:nth-last-child(1) {
-       margin: 0;
-    }
-    
-    #controls{
-      text-align:center;
-    }
+ .text-and-controls{
+    width: 100%;
+    display: flex;
+ }
+
+ .text{
+    overflow: hidden;
+    flex-grow:1;
+    width: 100%;
+    margin-top:1vw;
+ }
+
+ .text-items{
+   width: 400%;
+   display: flex;
+ }
+
+ .text-items .item{
+   transition: 1s ease;
+    width: 25%;
+    font-size: 1.5vw;
+ }
+
+ @media screen and (max-width: 468px) {
+   .text-and-controls{
+      flex-direction: column-reverse;
+   }
+   #controls{
+      align-self: center;
+      margin: 3vw 0;
+   }
+   .text{
+      margin:0;
+   }
  }
